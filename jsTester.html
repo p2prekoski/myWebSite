@@ -1,0 +1,57 @@
+<html>
+<head>
+<script language = "JavaScript">
+
+var number = 0;// global variable
+var myList = [ "Sally", "Joe", "Carl", "Doug"]    
+function tester()
+     
+{
+/*
+// variable 
+	var answer; // declare a new variable called answer
+   confirm("Hello world");// true or false is stored in answer variable
+    answer = prompt ("whats your name?"); // string literal 
+    alert("Welcome to my site, "+answer);
+ 
+    
+    // -- test EQUALITY
+    number = number -1;
+    alert (number);
+    
+    if(number == 0)
+    {
+    alert ("Blastoff");
+    number = 12;
+    }
+    else 
+    { 
+        alert (number);
+    }
+    */
+    alert (myList[number]);
+    number = number+1;
+    if( number == 4)
+        {
+            number = 0;
+        }
+}
+
+
+</script>
+
+</head>
+<body>
+<center> 
+<h1> JavaScript Tester </h1>
+
+<br/>
+<br/>
+
+<input type="button" value="Click Me" onClick="tester()">
+<br/>
+    <br/>
+    Click here to go to the <a href="index.html">main page </a>
+</center>
+</body>
+</html>
