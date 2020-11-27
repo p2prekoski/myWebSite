@@ -1,0 +1,54 @@
+<html>
+<head>
+<body background="images/8ballbg.jpeg">
+<script languague = "JavaScript">
+     
+var answers = ["yes","no", "maybe", "seems unlikely", "haha absolutly not!", "I doubt it", "it could happen", "very soon","probably","depends on if you live through it","of course","never","check the weather",];
+function random()
+
+{
+    var rand = -1;
+    var solution = document.getElementById("answer");
+    var userQ = document.getElementById("question");
+    //rand = Math.random();//reterns  a random decimal between (inclusive) and (exclusive)
+    // to generate a rondom # muotiply math.random * # of options 
+    //which results in a number between 0 and [options-1]
+   rand = Math.random()* answers.length;// var 21 rand range will be 0 and max range will be 20 
+    rand = Math.floor(rand);
+   //alert(userQ.value.length);     
+
+
+    if(userQ.value.length ==0)//user hasent asked a question yet
+    {
+     solution.value = "Please ask a question first before i answer"
+    }
+    else
+    {
+      solution.value = answers[rand];
+    }
+   
+}
+
+    
+</script>
+</head>
+<body>
+<center>
+<h1>Magic 8 ball </h1>
+   <p>
+      If you type in a question to the top text box you will get a fortune bakc that will answer 100% accuratly!
+       </p>   
+    <input id="question" type = "text" size="80"/> 
+    <br/>
+    <br/>
+    <input type="button" value="Click here" onClick="random()"/>
+    <br/>
+    <br/>
+     <input id="answer" type = "text" size="80"/>
+    <br/>
+    <br/>
+    <img src="images/magic8ballphoto.jpg" width="300"/>  
+
+</center>
+</body>
+</html>
