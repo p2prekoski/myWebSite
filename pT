@@ -1,0 +1,43 @@
+
+
+<html>
+<head>
+<script language="JavaScript">
+var favFoods = ["waffles", "stuffing", "sushi", "pizza", "burgers", "oatmeal", "burritos", "bacon"]
+var counter = 0 
+function start()
+{
+	var tbox = document.getElementById("display");
+    //counter = +1;
+    //counteer += 1;
+    counter++;
+	tbox.value = (favFoods[counter]);
+    var x=tbox.value
+    if (counter< favFoods.length)
+    {
+    var timer = setTimeout("start()",1000);
+    }
+    else
+    {
+        tbox.value = "";
+    }
+while (counter<favFoods.length)
+    {
+        alert(favFoods[counter]);
+        counter++
+    }
+   
+
+}
+
+</script>
+</head>
+<body>
+<center>
+<h1>Loop Test</h1>
+<input type="button" value="Click me" onClick="start()"/>
+<br/><br/>
+<input id="display" type="text" size="75"/>
+
+<body>
+</html>
